@@ -6,4 +6,4 @@ mysqldump --host="${HOST:-localhost}" --user="${USER}" --password="${PASSWORD}" 
     | gzip -c \
     > $FILENAME
 ls -lah *.gz
-s3cmd put --config=${S3CFG_PATH} --verbose --progress $FILENAME s3://${BUCKET}/${S3_DIR}/
+s3cmd put --config=${S3CFG_PATH:-/.s3cfg} --verbose --progress $FILENAME s3://${S3_BUCKET}/${S3_DIR}/
