@@ -1,6 +1,6 @@
 # mysql-backup-s3
 
-Docker container to backup mysql database to S3
+Docker container to backup mysql database to S3 via [s3cmd](https://github.com/s3tools/s3cmd)
 
 ```
 docker run --rm \
