@@ -4,7 +4,7 @@ Docker container to backup mysql database to S3 via [s3cmd](https://github.com/s
 
 ## Motivation
 
-While running mysql in containers backups, one of the options is to use separate staeless container for making backups and run it via cron or even jenkins.
+While running mysql in containers backups, one of the options is to use separate stateless container for making backups and uploading them to the cloud, and run it via cron or even jenkins (via `build periodically`).
 
 ## Usage example
 
