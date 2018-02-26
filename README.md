@@ -4,7 +4,7 @@ Docker container to backup mysql database to S3
 
 ```
 docker run --rm \
-  -v $S3CFG_PATH:/.s3cfg \
+  -v .s3cfg:/.s3cfg \
   -e HOST=host \
   -e USER=user \
   -e PASSWORD=password\
