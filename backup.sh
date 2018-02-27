@@ -13,4 +13,4 @@ mysqldump --host="${HOST}" --user="${USER}" --password="${PASSWORD}" --port="${P
 
 ls -lah *.xz
 
-s3cmd put --verbose --progress $FILENAME s3://${S3_BUCKET}/${S3_DIR}/
+s3cmd put --verbose --progress $FILENAME s3://${S3_PATH}/

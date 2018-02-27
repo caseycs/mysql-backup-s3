@@ -18,7 +18,6 @@ docker run --rm \
   -e USER=user \
   -e PASSWORD=password\
   -e DATABASE=database \
-  -e S3_BUCKET=backups \
-  -e S3_DIR=mysql-database \
+  -e S3_PATH=bucket/directory \
   caseycs/mysql-backup-s3
 ```
