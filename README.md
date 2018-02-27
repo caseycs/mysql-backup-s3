@@ -21,3 +21,7 @@ docker run --rm \
   -e S3_PATH=bucket/directory \
   caseycs/mysql-backup-s3
 ```
+
+## Hits
+
+Use can specify `xz` compression parameters via `XZ_OPTIONS`: `-e XZ_OPTIONS="-vv -T0 -1"`
