@@ -7,10 +7,10 @@ set -ex
 FILENAME=$(date +%Y-%m-%d_%H-%M-%S)_${DATABASE}.sql.xz
 
 mysqldump --host="${HOST}" --user="${USER}" --password="${PASSWORD}" --port="${PORT:-3306}" "${DATABASE}" \
-    | pv --progress --timer --force \
+    | pv --progress --timer --force --interval 5 --null \
     | xz ${XZ_OPTIONS} \
     > $FILENAME
 
 ls -lah *.xz
 
-s3cmd put --verbose --progress $FILENAME s3://${S3_PATH}/
+s3cmd ${S3CMD_OPTIONS} --verbose --progress put $FILENAME s3://${S3_PATH}/
