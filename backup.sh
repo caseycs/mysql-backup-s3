@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 set -ex
+set -o pipefail
 
 [[ -z "$HOST" ]] && { echo "HOST is empty" ; exit 1; }
 [[ -z "$USER" ]] && { echo "USER is empty" ; exit 1; }
