@@ -8,7 +8,7 @@ set -o pipefail
 FILENAME=$(date +%Y-%m-%d_%H-%M-%S)_${DATABASE}.sql.xz
 
 mysqldump --host="${HOST}" --user="${USER}" --password="${PASSWORD}" --port="${PORT:-3306}" "${DATABASE}" \
-    | unbuffer pv --progress --timer --force --bytes --interval 5 \
+    | pv --progress --timer --force --bytes --interval 3 \
     | xz ${XZ_OPTIONS} \
     > $FILENAME
 
